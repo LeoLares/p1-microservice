@@ -59,7 +59,7 @@ public class Controller {
         Product product = new Product();
         item.setCantidad(cantidad);
         product.setId(id);
-        product.setName("Calculadora");
+        product.setName("iphone");
         product.setPrice(3000.00);
         item.setProduct(product);
         return CompletableFuture.supplyAsync(() -> item);

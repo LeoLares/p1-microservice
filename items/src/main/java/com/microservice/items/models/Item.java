@@ -1,6 +1,6 @@
 package com.microservice.items.models;
 
-import com.microservice.items.models.Product;
+import com.microservice.commons.models.entity.Product;
 
 public class Item {
 

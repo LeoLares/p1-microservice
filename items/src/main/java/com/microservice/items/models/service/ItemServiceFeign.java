@@ -2,7 +2,7 @@ package com.microservice.items.models.service;
 
 import com.microservice.items.client.ProductClientRest;
 import com.microservice.items.models.Item;
-import com.microservice.items.models.Product;
+import com.microservice.commons.models.entity.Product;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,7 +1,7 @@
 package com.microservice.items.controllers;
 
+import com.microservice.commons.models.entity.Product;
 import com.microservice.items.models.Item;
-import com.microservice.items.models.Product;
 import com.microservice.items.models.service.ItemService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

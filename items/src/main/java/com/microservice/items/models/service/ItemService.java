@@ -1,7 +1,7 @@
 package com.microservice.items.models.service;
 
 import com.microservice.items.models.Item;
-import com.microservice.items.models.Product;
+import com.microservice.commons.models.entity.Product;
 
 import java.util.List;
 

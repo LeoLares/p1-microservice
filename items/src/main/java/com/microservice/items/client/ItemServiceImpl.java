@@ -1,7 +1,7 @@
 package com.microservice.items.client;
 
 import com.microservice.items.models.Item;
-import com.microservice.items.models.Product;
+import com.microservice.commons.models.entity.Product;
 import com.microservice.items.models.service.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpMethod;

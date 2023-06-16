@@ -1,6 +1,7 @@
 package com.service.product.service;
 
-import com.service.product.entity.Product;
+
+import com.microservice.commons.models.entity.Product;
 
 import java.util.List;
 

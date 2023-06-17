@@ -33,8 +33,10 @@ public class EjemploGatewayFilterFactory extends AbstractGatewayFilterFactory<Ej
 
     public class Configuracion{
          private String message;
+
+        private String cookieName;
          private String cookieValue;
-         private String cookieName;
+
 
          public String getMessage() {
              return message;
@@ -44,6 +46,14 @@ public class EjemploGatewayFilterFactory extends AbstractGatewayFilterFactory<Ej
              this.message = message;
          }
 
+        public String getCookieName() {
+            return cookieName;
+        }
+
+        public void setCookieName(String cookieName) {
+            this.cookieName = cookieName;
+        }
+
          public String getCookieValue() {
              return cookieValue;
          }
@@ -52,13 +62,7 @@ public class EjemploGatewayFilterFactory extends AbstractGatewayFilterFactory<Ej
              this.cookieValue = cookieValue;
          }
 
-         public String getCookieName() {
-             return cookieName;
-         }
 
-         public void setCookieName(String cookieName) {
-             this.cookieName = cookieName;
-         }
      }
 
 }

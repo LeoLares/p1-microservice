@@ -7,9 +7,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.cloud.client.circuitbreaker.CircuitBreaker;
+//import org.springframework.cloud.client.circuitbreaker.CircuitBreaker;
+import org.springframework.cloud.client.circuitbreaker.CircuitBreakerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -19,7 +22,7 @@ public class Controller {
     private final Logger logger = LoggerFactory.getLogger(Controller.class);
 
     @Autowired
-    private CircuitBreaker cbFactory;
+    private CircuitBreakerFactory cbFactory;
 
     @Autowired
     @Qualifier("itemServiceFeign")
@@ -32,7 +35,9 @@ public class Controller {
 
     // aplicar circuitbraker con anotaciones
 
-    @io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker(name = "items")
+
+
+    @CircuitBreaker(name="items")
     @GetMapping("/verItem/{id}/cantidad/{cantidad}")
     public Item verItem(@PathVariable Long id, @PathVariable Integer cantidad) {
         return itemService.findAllById(id, cantidad);

@@ -31,7 +31,7 @@ public class EjemploGatewayFilterFactory extends AbstractGatewayFilterFactory<Ej
     }
 
 
-    public class Configuracion{
+    public static class Configuracion{
          private String message;
 
         private String cookieName;

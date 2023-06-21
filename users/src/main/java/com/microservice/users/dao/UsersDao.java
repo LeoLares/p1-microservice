@@ -10,6 +10,7 @@ import org.springframework.data.rest.core.annotation.RestResource;
 @RepositoryRestResource(path = "users")
 public interface UsersDao extends PagingAndSortingRepository<User,Long> {
 
-    @RestResource(path = "search-username")
-    public User findByUsername(@Param("name") String username);
+    @RestResource(path = "search-username")  //
+    public User findByUsername(@Param("name") String username); //conectando con operadores logicos podemosm agregar mas de un filtro
+    //ejemplo findByUsernameAndEmail
 }

@@ -1,1 +1,2 @@
-insert into users (username,name,)
+insert into users_dev (username,name,lastname,password,email,enabled) values ('carlos23','Carlos','Perez','12345','carlos@gmail.com',true);
+insert into users_dev (username,name,lastname,password,email,enabled) values ('jose23','Jose','Perez','12345','jose@gmail.com',true);

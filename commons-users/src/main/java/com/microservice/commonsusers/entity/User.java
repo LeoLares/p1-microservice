@@ -24,11 +24,15 @@ public class User implements Serializable {
     @Column(unique = true , length = 100)
     private String email;
 
-    @ManyToMany(fetch = FetchType.LAZY)
+    @ManyToMany(fetch = FetchType.LAZY) //anotacion de spring para cardinalidad es decir la relacion
+    //lazy es una busqueda mas especifica y con eager trae  todo junto, lazy es carga peresoza es decir solo trae el users
+    // los roles los traes con el get y eager trae todo juntois users y roles
     @JoinTable(name = "users_roles", joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"),
             uniqueConstraints = {@UniqueConstraint(columnNames = { "user_id", "role_id" }) })
-    private List<Role> roles;
+    private List<Role> roles; //como en este caso solo queremos aplicar una sola direccion de relacion ubicamos esto en la clase user,
+    //en caso que la relacion sea bidireccional debemos aplicar lo mismo pero a la inversa en la clase roles
+    //agregando despues del fetchTyope.Lazy , el mappedBy=Roles para lo tomer a l inversa
 
     public List<Role> getRoles() {
         return roles;

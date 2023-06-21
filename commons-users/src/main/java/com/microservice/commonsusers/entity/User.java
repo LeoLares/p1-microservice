@@ -17,7 +17,7 @@ public class User implements Serializable {
     @Column(unique = true , length = 20)
     private String username;
     private String name;
-    private String apellido;
+    private String lastname;
     @Column(length = 60)
     private String password;
 
@@ -68,11 +68,11 @@ public class User implements Serializable {
     }
 
     public String getApellido() {
-        return apellido;
+        return lastname;
     }
 
     public void setApellido(String apellido) {
-        this.apellido = apellido;
+        this.lastname = apellido;
     }
 
     public String getPassword() {

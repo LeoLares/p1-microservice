@@ -31,5 +31,5 @@ public class Role implements Serializable {
         this.nameRole = nameRole;
     }
 
-    private static final long serialVersionUID = 4462331611801172710L;
+    private static final long serialVersionUID = 4462330911801172710L;
 }

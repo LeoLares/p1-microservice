@@ -24,6 +24,8 @@ public class User implements Serializable {
     @Column(unique = true , length = 100)
     private String email;
 
+    private boolean enabled;
+
     @ManyToMany(fetch = FetchType.LAZY) //anotacion de spring para cardinalidad es decir la relacion
     //lazy es una busqueda mas especifica y con eager trae  todo junto, lazy es carga peresoza es decir solo trae el users
     // los roles los traes con el get y eager trae todo juntois users y roles
@@ -41,7 +43,7 @@ public class User implements Serializable {
     public void setRoles(List<Role> roles) {
         this.roles = roles;
     }
-    private boolean enabled;
+
 
     public Long getId() {
         return id;
@@ -91,7 +93,7 @@ public class User implements Serializable {
         this.email = email;
     }
 
-    public boolean isEnabled() {
+    public boolean getEnabled() {
         return enabled;
     }
 
